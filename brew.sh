@@ -23,6 +23,8 @@ brew install --cask google-chrome
 brew install --cask spotify
 brew install --cask slack
 brew install --cask iterm2
+brew install --cask sizeup
+brew install --cask tower
 
 # Install fonts
 brew install --cask font-fira-code

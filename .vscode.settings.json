@@ -1,5 +1,6 @@
 {
-    // Change font to Fira Code
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "workbench.statusBar.visible": false,
 }
