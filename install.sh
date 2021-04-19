@@ -9,6 +9,9 @@ git pull origin master
 # Configure zsh
 ./zsh.sh
 
+# Configure iterm
+./iterm.sh
+
 # Install VSCode extensions
 ./vscode.sh
 

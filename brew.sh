@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Install homebrew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
 # Make sure we’re using the latest Homebrew.
 brew update
 
@@ -12,16 +9,24 @@ brew upgrade
 # Save Homebrew’s installed location.
 BREW_PREFIX=$(brew --prefix)
 
+# Taps
+brew tap homebrew/cask-fonts
+
 # Install languages etc
 brew install zsh
 brew install node
 brew install yarn
 
 # Install apps
-brew cask install visual-studio-code
-brew cask install google-chrome
-brew cask install spotify
-brew cask install slack
-brew cask install iterm2
+brew install --cask visual-studio-code
+brew install --cask google-chrome
+brew install --cask spotify
+brew install --cask slack
+brew install --cask iterm2
+brew install --cask sizeup
+brew install --cask tower
+
+# Install fonts
+brew install --cask font-fira-code
 
 brew cleanup

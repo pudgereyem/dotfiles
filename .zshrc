@@ -22,10 +22,9 @@ chpwd() {
 }
 
 # Set Spaceship ZSH as a prompt
+fpath=($fpath "/Users/victormeyer/.zfunctions")
 SPACESHIP_PACKAGE_SHOW=false
 SPACESHIP_NODE_SHOW=true
 SPACESHIP_DOCKER_SHOW=false
 autoload -U promptinit; promptinit
 prompt spaceship
-
-ZSH_THEME="spaceship"

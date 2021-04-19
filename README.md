@@ -5,11 +5,20 @@ Dotfiles used by @pudgereyem.
 ### About
 
 - Installs homebrew
-- Installs git, yarn, node (etc) and a bunch of apps that I use
+- Installs yarn, node (etc) and a bunch of apps that I use
 - Installs and configures zsh
-- Installs a few vscode plugins
+- Installs a few vscode plugins, and symlinks settings file
 - Symlinks `.zshrc` to `~/code/dotfiles/.zshrc`
 - Sets a few OSX settings (optional)
+
+> FYI: Certain Applications such as `1Password`, `Dropbox`, etc I have chosen to install manually.
+
+### Before you do anything
+
+1. Install Xcode Developer Tools, `xcode-select --install`
+2. [Configure Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
+3. [Generate a new SSH Key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+4. [Install Homebrew](https://brew.sh)
 
 ### Usage
 
