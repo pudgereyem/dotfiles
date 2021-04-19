@@ -1,0 +1,5 @@
+{
+    // Change font to Fira Code
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
+}
