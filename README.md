@@ -4,7 +4,6 @@ Dotfiles used by @pudgereyem.
 
 ### About
 
-- Installs homebrew
 - Installs yarn, node (etc) and a bunch of apps that I use
 - Installs and configures zsh
 - Installs a few vscode plugins, and symlinks settings file
