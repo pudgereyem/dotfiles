@@ -28,6 +28,7 @@ brew install --cask tower
 brew install --cask docker
 brew install --cask sequel-pro
 brew install --cask notable
+brew install --cask droplr
 
 # Install fonts
 brew install --cask font-fira-code
