@@ -3,6 +3,7 @@ export ZSH="/Users/victormeyer/.oh-my-zsh"
 
 plugins=(
   git
+  zsh-nvm
   node
   yarn
   git-extras
@@ -28,3 +29,4 @@ SPACESHIP_NODE_SHOW=true
 SPACESHIP_DOCKER_SHOW=false
 autoload -U promptinit; promptinit
 prompt spaceship
+fpath=($fpath "/Users/victormeyer/.zfunctions")

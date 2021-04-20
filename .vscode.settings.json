@@ -3,4 +3,5 @@
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
     "workbench.statusBar.visible": false,
+    "projectManager.openInNewWindowWhenClickingInStatusBar": true
 }
