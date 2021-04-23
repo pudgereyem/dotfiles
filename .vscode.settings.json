@@ -2,6 +2,9 @@
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.minimap.enabled": false,
-    "workbench.statusBar.visible": false,
-    "projectManager.openInNewWindowWhenClickingInStatusBar": true
+    "projectManager.openInNewWindowWhenClickingInStatusBar": true,
+    "editor.quickSuggestions": {
+        "strings": true // auto suggestions for tailwindcss
+    },
+    "tailwindCSS.emmetCompletions": true // so that you can do emmet stuff
 }
