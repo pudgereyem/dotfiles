@@ -14,8 +14,8 @@ brew tap homebrew/cask-fonts
 
 # Install languages etc
 brew install zsh
-brew install node
-brew install yarn
+brew install fnm
+Brew install tree
 
 # Install apps
 brew install --cask visual-studio-code
@@ -25,9 +25,6 @@ brew install --cask slack
 brew install --cask iterm2
 brew install --cask sizeup
 brew install --cask tower
-brew install --cask docker
-brew install --cask sequel-pro
-brew install --cask notable
 brew install --cask droplr
 
 # Install fonts

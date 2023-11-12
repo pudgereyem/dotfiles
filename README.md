@@ -4,7 +4,7 @@ Dotfiles used by @pudgereyem.
 
 ### About
 
-- Installs yarn, node (etc) and a bunch of apps that I use
+- Installs node, yarn (etc) and a bunch of apps that I use
 - Installs and configures zsh
 - Installs a few vscode plugins, and symlinks settings file
 - Symlinks `.zshrc` to `~/code/dotfiles/.zshrc`
@@ -34,6 +34,7 @@ or manually:
 ./zsh.sh
 ./vscode.sh
 ln -sv ~/code/dotfiles/.zshrc ~
+./npm.sh
 ```
 
 ### OSX settings
