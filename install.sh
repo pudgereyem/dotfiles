@@ -12,8 +12,8 @@ git pull origin master
 # Configure iterm
 ./iterm.sh
 
-# symlink zshrc file
-ln -sv ~/code/dotfiles/.zshrc ~
-
 # Install npm packages
 ./npm.sh
+
+# symlink zshrc file
+ln -sv ~/code/dotfiles/.zshrc ~

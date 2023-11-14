@@ -32,9 +32,8 @@ or manually:
 ```sh
 ./brew.sh
 ./zsh.sh
-./vscode.sh
-ln -sv ~/code/dotfiles/.zshrc ~
 ./npm.sh
+ln -sv ~/code/dotfiles/.zshrc ~
 ```
 
 ### OSX settings
