@@ -26,3 +26,14 @@ eval $(/opt/homebrew/bin/brew shellenv)
 
 # https://github.com/Schniz/fnm#zsh
 eval "$(fnm env --use-on-cd)"
+
+# pnpm
+export PNPM_HOME="/Users/victormeyer/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+
+# postgres 16
+export PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
