@@ -29,5 +29,6 @@ brew install --cask droplr
 
 # Install fonts
 brew install --cask font-fira-code
+brew install --cask font-fira-code-nerd-font
 
 brew cleanup
