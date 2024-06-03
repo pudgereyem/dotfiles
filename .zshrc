@@ -29,3 +29,9 @@ eval "$(fnm env --use-on-cd)"
 fpath=($fpath "/Users/victormeyer/.zfunctions")
 
 eval "$(starship init zsh)"
+
+# load local settings if there are any
+# I place specific code that I don't necessarily want to have in my next computer here, e.g `export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home`
+if [ -f ~/.zshrc.local ]; then
+  source ~/.zshrc.local
+fi
