@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-# Download latest
-git pull origin master
-
 # Install stuff
 ./brew.sh
 
