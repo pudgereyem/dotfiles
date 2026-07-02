@@ -2,5 +2,11 @@
 
 # Install node using fnm
 eval "$(fnm env)"
-fnm install 22
-fnm use 22
+fnm install 24
+fnm default 24
+
+# Install a default Python via uv (provides python/python3/pip shims
+# in ~/.local/bin, which .zshrc puts on PATH)
+if command -v uv &>/dev/null; then
+  uv python install 3.14 --default
+fi

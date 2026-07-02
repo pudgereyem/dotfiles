@@ -1,36 +1,16 @@
 #!/usr/bin/env bash
 
-# Make sure we’re using the latest Homebrew.
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Install Homebrew if missing (fresh machine)
+if ! command -v brew &>/dev/null && [ ! -x /opt/homebrew/bin/brew ]; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+[ -x /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Make sure we're using the latest Homebrew, then install everything declared
+# in the Brewfile. Re-running is idempotent.
 brew update
-
-# Upgrade any already-installed formulae.
-brew upgrade
-
-# Save Homebrew’s installed location.
-BREW_PREFIX=$(brew --prefix)
-
-# Install languages etc
-brew install zsh
-brew install fnm
-brew install pnpm
-brew install tree
-brew install starship
-
-# Install apps
-brew install --cask visual-studio-code
-brew install --cask google-chrome
-brew install --cask spotify
-brew install --cask slack
-brew install --cask iterm2
-brew install --cask droplr
-brew install --cask obsidian
-brew install --cask rectangle
-brew install --cask github
-brew install --cask betterdisplay
-brew install --cask figma
-
-# Install fonts
-brew install --cask font-fira-code
-brew install --cask font-fira-code-nerd-font
+brew bundle --file="$DOTFILES_DIR/Brewfile"
 
 brew cleanup
