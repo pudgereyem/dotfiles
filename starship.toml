@@ -1,0 +1,6 @@
+# Starship prompt config — https://starship.rs/config/
+
+# fnm's multishell node has a cold-start cost; the first `node --version`
+# after opening a JS/TS project can exceed Starship's 500ms default and
+# print a "command timed out" warning. Give commands more headroom.
+command_timeout = 2000

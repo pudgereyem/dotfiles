@@ -21,9 +21,11 @@ fi
 "$DOTFILES_DIR/npm.sh"
 
 # Symlink dotfiles
+mkdir -p "$HOME/.config"
 ln -sfnv "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
 ln -sfnv "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
 ln -sfnv "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
+ln -sfnv "$DOTFILES_DIR/starship.toml" "$HOME/.config/starship.toml"
 
 # Seed machine-local zsh config on first run (never overwritten)
 if [ ! -e "$HOME/.zshrc.local" ]; then
