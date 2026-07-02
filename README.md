@@ -6,7 +6,6 @@ Dotfiles used by @pudgereyem.
 
 - Installs node, yarn (etc) and a bunch of apps that I use
 - Installs and configures zsh
-- Installs a few vscode plugins, and symlinks settings file
 - Symlinks `.zshrc` to `~/code/dotfiles/.zshrc`
 - Sets a few OSX settings (optional)
 
@@ -34,6 +33,14 @@ or manually:
 ./zsh.sh
 ./npm.sh
 ln -sv ~/code/dotfiles/.zshrc ~
+```
+
+### Local shell config
+
+Machine-specific paths (Flutter, adb, etc) go in `~/.zshrc.local`, which `.zshrc` sources if present. Start from the example:
+
+```sh
+cp .zshrc.local.example ~/.zshrc.local
 ```
 
 ### OSX settings

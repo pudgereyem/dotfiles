@@ -1,0 +1,11 @@
+# ~/.zshrc.local — machine-specific config, sourced by .zshrc if present.
+# Copy to ~/.zshrc.local on a new machine and keep what applies:
+#
+#   cp .zshrc.local.example ~/.zshrc.local
+
+# Flutter (clone flutter to ~/code/flutter first)
+export PATH="$PATH:$HOME/code/flutter/bin"
+export PATH="$PATH:$HOME/.pub-cache/bin"
+
+# adb (installed with Android Studio)
+export PATH="$PATH:$HOME/Library/Android/sdk/platform-tools"
