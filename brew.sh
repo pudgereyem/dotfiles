@@ -12,6 +12,7 @@ BREW_PREFIX=$(brew --prefix)
 # Install languages etc
 brew install zsh
 brew install fnm
+brew install pnpm
 brew install tree
 brew install starship
 
@@ -25,6 +26,8 @@ brew install --cask droplr
 brew install --cask obsidian
 brew install --cask rectangle
 brew install --cask github
+brew install --cask betterdisplay
+brew install --cask figma
 
 # Install fonts
 brew install --cask font-fira-code
