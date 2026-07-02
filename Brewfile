@@ -30,6 +30,7 @@ cask "rectangle"
 cask "github"
 cask "betterdisplay"
 cask "figma"
+cask "claude-code"
 
 # Fonts
 cask "font-fira-code"
