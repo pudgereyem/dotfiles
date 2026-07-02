@@ -11,6 +11,8 @@ fi
 # Make sure we're using the latest Homebrew, then install everything declared
 # in the Brewfile. Re-running is idempotent.
 brew update
-brew bundle --file="$DOTFILES_DIR/Brewfile"
+# --no-quarantine keeps casks from getting macOS's quarantine flag, which
+# otherwise triggers App Translocation (e.g. duplicate VS Code dock icons).
+HOMEBREW_CASK_OPTS="--no-quarantine" brew bundle --file="$DOTFILES_DIR/Brewfile"
 
 brew cleanup
