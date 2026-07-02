@@ -17,6 +17,7 @@ brew "zoxide"
 brew "jq"
 brew "git-delta"
 brew "lazygit"
+brew "cocoapods" # Flutter iOS/macOS plugin support
 
 # Apps
 cask "visual-studio-code"
@@ -30,6 +31,7 @@ cask "rectangle"
 cask "github"
 cask "betterdisplay"
 cask "figma"
+cask "android-studio" # Flutter Android SDK + emulator
 cask "claude-code"
 cask "claude"
 
