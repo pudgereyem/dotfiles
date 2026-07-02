@@ -56,6 +56,11 @@ defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain InitialKeyRepeat -int 20
 
+# Press fn to show Emoji & Symbols (input source switching stays on ctrl+space)
+# Note: keyboard layouts (U.S. + Swedish - Pro) must still be added manually in
+# System Settings > Keyboard > Input Sources.
+defaults write com.apple.HIToolbox AppleFnUsageType -int 2
+
 ###############################################################################
 # Finder                                                                      #
 ###############################################################################
