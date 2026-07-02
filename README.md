@@ -4,40 +4,44 @@ Dotfiles used by @pudgereyem.
 
 ### About
 
-- Installs node, yarn (etc) and a bunch of apps that I use
-- Installs and configures zsh
-- Symlinks `.zshrc` to `~/code/dotfiles/.zshrc`
+- Installs Homebrew (if missing) and everything in the `Brewfile` (CLI tools, apps, fonts)
+- Installs and configures zsh (oh-my-zsh + plugins, starship prompt)
+- Installs Node via `fnm` and a default Python via `uv`
+- Symlinks `.zshrc`, `.gitconfig` and `.gitignore_global` into `~`
+- Points iTerm2 at the profile in `iterm2_profile/`
 - Sets a few OSX settings (optional)
 
 > FYI: Certain Applications such as `1Password`, `Dropbox`, etc I have chosen to install manually.
 
-### Before you do anything
+### New machine setup
 
-1. Install Xcode Developer Tools, `xcode-select --install`
-2. [Configure Git](https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration)
-3. [Generate a new SSH Key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
-4. [Install Homebrew](https://brew.sh)
+1. Sign into your password manager and browser first — everything else
+   authenticates through them. If using 1Password, enable its SSH agent
+   (Settings → Developer → _Use the SSH agent_).
+2. Install Xcode Command Line Tools (Homebrew needs them):
+   ```sh
+   xcode-select --install
+   ```
+3. Clone and install:
+   ```sh
+   git clone https://github.com/pudgereyem/dotfiles ~/code/dotfiles
+   cd ~/code/dotfiles
+   ./install.sh
+   ```
+4. Restart the terminal (or run `exec zsh`), then authenticate GitHub:
+   ```sh
+   gh auth login
+   ```
+   Git uses `gh` as its credential helper, so this covers git push/pull too.
+5. Optional: turn on commit signing via 1Password — steps are commented
+   inline in `.gitconfig`.
+6. Review and run the OSX settings (see below), then log out/in.
 
-### Usage
-
-```sh
-git clone https://github.com/pudgereyem/dotfiles
-cd dotfiles
-./install.sh
-```
-
-or manually:
-
-```sh
-./brew.sh
-./zsh.sh
-./npm.sh
-ln -sv ~/code/dotfiles/.zshrc ~
-```
+Re-running `./install.sh` later is idempotent — it re-applies everything safely.
 
 ### Local shell config
 
-Machine-specific paths (Flutter, adb, etc) go in `~/.zshrc.local`, which `.zshrc` sources if present. Start from the example:
+Machine-specific paths (Flutter, adb, etc) go in `~/.zshrc.local`, which `.zshrc` sources if present. `install.sh` seeds it from the example on first run:
 
 ```sh
 cp .zshrc.local.example ~/.zshrc.local

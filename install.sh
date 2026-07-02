@@ -1,16 +1,31 @@
 #!/usr/bin/env bash
 
-# Install stuff
-./brew.sh
+DOTFILES_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# Install Homebrew + everything in the Brewfile
+"$DOTFILES_DIR/brew.sh"
+
+# Put Homebrew on PATH so the scripts below (and their tools like fnm)
+# resolve, even on a first install where ~/.zshrc hasn't been sourced yet.
+if [ -x /opt/homebrew/bin/brew ]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # Configure zsh
-./zsh.sh
+"$DOTFILES_DIR/zsh.sh"
 
 # Configure iterm
-./iterm.sh
+"$DOTFILES_DIR/iterm.sh"
 
-# Install npm packages
-./npm.sh
+# Install node + a default python
+"$DOTFILES_DIR/npm.sh"
 
-# symlink zshrc file
-ln -sv ~/code/dotfiles/.zshrc ~
+# Symlink dotfiles
+ln -sfnv "$DOTFILES_DIR/.zshrc" "$HOME/.zshrc"
+ln -sfnv "$DOTFILES_DIR/.gitconfig" "$HOME/.gitconfig"
+ln -sfnv "$DOTFILES_DIR/.gitignore_global" "$HOME/.gitignore_global"
+
+# Seed machine-local zsh config on first run (never overwritten)
+if [ ! -e "$HOME/.zshrc.local" ]; then
+  cp -v "$DOTFILES_DIR/.zshrc.local.example" "$HOME/.zshrc.local"
+fi
