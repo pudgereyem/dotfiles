@@ -31,6 +31,7 @@ cask "github"
 cask "betterdisplay"
 cask "figma"
 cask "claude-code"
+cask "claude"
 
 # Fonts
 cask "font-fira-code"
